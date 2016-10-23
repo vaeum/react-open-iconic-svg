@@ -30,7 +30,7 @@ export default class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <h1>react-octicons-svg</h1>
+          <h1>react-open-iconic-svg</h1>
         </div>
 
         <div className={cn('note').state({show: this.state.showNote})}>
