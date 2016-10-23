@@ -1,6 +1,20 @@
+#fork-me{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
 #root{
 
 }
+
+.page-title{
+  font-size: 50px;
+  margin-bottom: 50px;
+  margin-top: 60px;
+}
+
 
 .icons{
   &__note{
