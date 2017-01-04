@@ -86,8 +86,8 @@ gulp.task('replace', () => {
 
       return gulp.src('./dist/' + fileName)
         .pipe($.replace("classNameString", `className="${CLASSNAME} ${CLASSNAME}-${className}" {...this.props}`))
-        .pipe($.replace(/xmlns:xlink=".+?"/, ``))
-        .pipe($.replace(/xlink:href=".+?"/, ``))
+        .pipe($.replace(/xmlns:xlink=".+?"/g, ``))
+        .pipe($.replace(/xlink:href=".+?"/g, ``))
         .pipe(gulp.dest('./dist'));
     }));
 });
