@@ -85,7 +85,10 @@ gulp.task('replace', () => {
       let className = changeCase.lowerCase(changeCase.headerCase(fileName.replace('.jsx', '')));
 
       return gulp.src('./dist/' + fileName)
-        .pipe($.replace("classNameString", `className="${CLASSNAME} ${CLASSNAME}-${className}" {...this.props}`))
+        .pipe($.replace(
+          "classNameString",
+          `{...this.props} className={\`${CLASSNAME} ${CLASSNAME}-${className} \${this.props.className\}\`}`
+        ))
         .pipe($.replace(/xmlns:xlink=".+?"/g, ``))
         .pipe($.replace(/xlink:href=".+?"/g, ``))
         .pipe(gulp.dest('./dist'));
