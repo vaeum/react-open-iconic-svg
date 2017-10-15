@@ -48,7 +48,8 @@ gulp.task('svg', () =>
       fileList = filenames.get("svg");
 
       let component = `
-      import React, {Component, PropTypes} from 'react';
+      import React, {Component} from 'react';
+      import PropTypes from 'prop-types';
 
       export default class ${name}${PREFIX} extends Component {
         static propTypes = {
@@ -137,5 +138,3 @@ gulp.task('build', gulp.series(
 gulp.task('default', gulp.series(
   'svg', 'replace', 'file', 'watch'
 ))
-
-
