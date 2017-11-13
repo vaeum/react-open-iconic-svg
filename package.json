@@ -4,8 +4,7 @@
   "description": "Open iconic React version",
   "main": "index.js",
   "scripts": {
-    "start": "make",
-    "prepublish": "make prepublish"
+    "prepublish": "make"
   },
   "author": "vaeum",
   "license": "MIT",
@@ -26,21 +25,10 @@
     "open-iconic": "^1.1.1"
   },
   "devDependencies": {
-    "babel-core": "^6.21.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "change-case": "^3.0.0",
-    "child_process": "^1.0.2",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-ext-replace": "^0.3.0",
-    "gulp-filenames": "^4.0.0",
-    "gulp-insert": "^0.5.0",
-    "gulp-load-plugins": "^1.3.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.4",
-    "gulp-svgmin": "^1.2.3",
-    "gulp-tap": "^0.1.3",
-    "to-pascal-case": "^1.0.0"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "svg-to-react-cli": "^1.5.0"
   }
 }
