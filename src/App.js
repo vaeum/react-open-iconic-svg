@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import * as icon from 'react-open-iconic-svg';
-import CopyToClipboard from 'react-copy-to-clipboard';
+import React, { Component } from "react";
+import CopyToClipboard from "react-copy-to-clipboard";
+import * as Items from "../node_modules/react-open-iconic-svg/dist";
+import "./style.scss";
 
-import './style.scss';
-
-const cn = require('bem-cn')('icons');
+const cn = require("bem-cn")("icons");
 
 export default class App extends Component {
   constructor(props) {
@@ -13,18 +12,18 @@ export default class App extends Component {
     this.state = {
       copiedId: null,
       showNote: false
-    }
+    };
   }
 
-  renderIcon() {
+  renderIcon = () => {
     var arr = [];
 
-    for (var key in icon) {
-      arr.push(icon[key])
+    for (var key in Items) {
+      arr.push(Items[key]);
     }
 
     return arr;
-  }
+  };
 
   render() {
     return (
@@ -33,44 +32,46 @@ export default class App extends Component {
           <h1 className="page-title">React-open-iconic-svg</h1>
         </div>
 
-        <div className={cn('note').state({show: this.state.showNote})}>
+        <div className={cn("note").state({ show: this.state.showNote })}>
           <span>Copied</span>
         </div>
 
-        <ul className={cn('list').mix('row')}>
-          {this.renderIcon().map((e, i) =>
-             <li className={cn('list-item')} key={i}>
-                <CopyToClipboard text={`<${e.name} />`}
-                  onCopy={() => this.setState({copied: true})}>
-
-                  <div
-                    className={cn('link').state({copied: this.state.copiedId == i})}
-                    onClick={() => this.handerClick(i)} >
-
-                    <span className={cn('icon')}>{React.createElement(e)}</span>
-                    <span className={cn('icon-description')}>{e.name}</span>
-                  </div>
-                </CopyToClipboard>
-             </li>
-           )}
+        <ul className={cn("list").mix("row")}>
+          {this.renderIcon().map((e, i) => (
+            <li className={cn("list-item")} key={i}>
+              <CopyToClipboard
+                text={`<${e.name} />`}
+                onCopy={() => this.setState({ copied: true })}
+              >
+                <div
+                  className={cn("link").state({
+                    copied: this.state.copiedId == i
+                  })}
+                  onClick={() => this.handerClick(i)}
+                >
+                  <span className={cn("icon")}>{React.createElement(e)}</span>
+                  <span className={cn("icon-description")}>{e.name}</span>
+                </div>
+              </CopyToClipboard>
+            </li>
+          ))}
         </ul>
       </div>
     );
   }
 
-  handerClick(id){
+  handerClick(id) {
     this.setState({
       copiedId: id,
       showNote: true
-    })
+    });
 
     let hideNote = () => {
       this.setState({
         showNote: false
-      })
-    }
+      });
+    };
 
-    setTimeout(hideNote, 2000)
-
+    setTimeout(hideNote, 2000);
   }
 }
