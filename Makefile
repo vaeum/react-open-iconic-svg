@@ -1,5 +1,16 @@
 default:
+
+clean:
+	rm -rf lib
 	rm -rf dist
-	mkdir dist
-	cd node_modules/open-iconic/svg && ../../.bin/svgtoreact dir -o ../../../dist
-	./node_modules/.bin/babel dist -d dist
+	rm index.js
+
+build:
+	make clean
+	touch index.js
+	npm run build
+	npm run transpile
+	npm run transpileIndex
+
+publish:
+	npm run pub

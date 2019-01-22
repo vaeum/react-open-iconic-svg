@@ -2,10 +2,14 @@
   "name": "react-open-iconic-svg",
   "version": "2.0.0",
   "description": "Open iconic React version",
-  "main": "index.js",
   "scripts": {
-    "prepublish": "make"
+    "transpile": "babel dist --out-dir ./dist",
+    "transpileIndex": "babel index.js --out-dir .",
+    "build": "gulp",
+    "prepublish": "make build",
+    "pub": "np --yolo"
   },
+  "main": "index.js",
   "author": "vaeum",
   "license": "MIT",
   "keywords": [
@@ -21,14 +25,23 @@
     "url": "https://github.com/vaeum/react-open-iconic-svg/issues"
   },
   "homepage": "https://github.com/vaeum/react-open-iconic-svg#readme",
-  "dependencies": {
-    "open-iconic": "^1.1.1"
-  },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "svg-to-react-cli": "^1.5.0"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "change-case": "^3.1.0",
+    "gulp": "4.0.0",
+    "gulp-filenames": "^4.0.1",
+    "gulp-insert": "^0.5.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-prettier": "^2.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-svgmin": "^2.1.0",
+    "gulp-tap": "^1.0.1",
+    "np": "^4.0.1",
+    "open-iconic": "^1.1.1"
   }
 }
