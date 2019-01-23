@@ -1,6 +1,10 @@
-# react-open-iconic-svg
+<h1 align="center">
+  react-open-iconic-svg
+</h1>
 
-Octicons React version
+<h3 align="center">
+  Octicons React version
+</h3>
 
 <p align="center">
   <a href="https://nodei.co/npm/react-open-iconic-svg/">
