@@ -6,7 +6,7 @@ import { lowerCase, headerCase, pascalCase } from "change-case";
 
 const $ = gulpLoadPlugins({});
 
-const PREFIX = "";
+const PREFIX = "Icon";
 const CLASSNAME = "open-iconic";
 const DIST_FOLDER = "dist";
 const LIB_FOLDER = "lib";
@@ -64,7 +64,7 @@ gulp.task("svg", () =>
     )
     .pipe(
       $.rename(file => {
-        file.basename = `${pascalCase(file.basename)}`;
+        file.basename = `${pascalCase(file.basename)}${PREFIX}`;
         file.extname = ".js";
       })
     )
