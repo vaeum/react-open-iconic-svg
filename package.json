@@ -1,6 +1,6 @@
 {
   "name": "react-open-iconic-svg",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Open iconic React version",
   "scripts": {
     "transpile": "babel dist --out-dir ./dist",
