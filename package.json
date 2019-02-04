@@ -36,7 +36,7 @@
     "gulp-filenames": "^4.0.1",
     "gulp-insert": "^0.5.0",
     "gulp-load-plugins": "^1.5.0",
-    "gulp-prettier": "^2.0.0",
+    "gulp-prettier": "^2.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
     "gulp-svgmin": "^2.1.0",
